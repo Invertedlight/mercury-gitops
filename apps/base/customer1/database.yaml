@@ -14,3 +14,10 @@ spec:
 
   storage:
     size: 1Gi
+
+  # Phase 6: continuous WAL archiving to Azure Blob via the Barman Cloud plugin
+  plugins:
+    - name: barman-cloud.cloudnative-pg.io
+      isWALArchiver: true
+      parameters:
+        barmanObjectName: customer1-objectstore

@@ -13,3 +13,10 @@ patches:
       - op: replace
         path: /spec/parameters/tenantId
         value: "56064b81-ec30-4395-bb27-af9877c941dc"
+  - target:
+      kind: ObjectStore
+      name: customer1-objectstore
+    patch: |-
+      - op: replace
+        path: /spec/configuration/destinationPath
+        value: "https://mercurybackupsjrich.blob.core.windows.net/customer1"
